@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+}
+  
+.logo{
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      left: 25px;
+}
+.header{
+    /* position: relative; */
+    border-bottom: 1px solid #E2E8F0;
+    background-color:#03a9f4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 60px;
+    z-index: 1;
+}
+
+#main{
+    margin-top: 10px;
+  }
+  
+  .navbar {
+      display: flex;
+       justify-content: space-between;
+      align-items: center;
+      padding: 0rem 1.5rem;
+      right: 0;
+      left: 0;
+  
+  }
+  .nav-menu {
+      display: flex;
+      align-items: center;
+      padding: 0rem 5rem;
+      
+      
+    
+      
+  }
+  
+  .nav-item {
+      margin-left: 1rem;
+      margin-top: 10px;
+      
+     
+      
+  }
+  
+  .nav-link{
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #475569;
+      font-family: 'Raleway',sans-serif;
+      
+  }
+  
+  .nav-link:hover{
+      color: #A49370;
+  
+  }
+  
+  .nav-logo {
+      font-size: 2.1rem;
+      font-weight: 500;
+      top: 50px;
+     
+  }
+  .sidebar {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      height: 100%;
+      width: 60px;
+      position: fixed;
+      z-index: 1;
+      top: 100;
+      left: 0;
+      background-color:#03a9f4;
+      transition: 0.5s;
+      overflow-x: hidden;
+      padding-top: 50px;
+      white-space: nowrap;
+      margin-top: -94px;
+    }
+
+    /* * {
+        box-sizing: border-box;
+      }
+       */
+      /* body {
+        background-color: #f1f1f1;
+      }
+       */
+      #regForm {
+        background-color: #ffffff;
+        margin: 90px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+      }
+      
+      /* h1 {
+        text-align: center;  
+      } */
+      
+      input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+        border-radius: 7px;
+      }
+
+      select{
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+        border-radius: 7px;
+      }
+      
+      /* Mark input boxes that gets an error on validation: */
+      input.invalid {
+        background-color: #ffdddd;
+      }
+      
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+        font-weight: bold;
+        font-size: large;
+        
+      }
+      
+      button {
+        background-color: #03a9f4;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+        border-radius: 7px;
+        outline: none;
+      }
+      
+      button:hover {
+        opacity: 0.8;
+      }
+      
+      #prevBtn {
+        background-color: #03a9f4;
+      }
+      
+      /* Make circles that indicate the steps of the form: */
+      .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;  
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+      }
+      
+      .step.active {
+        opacity: 1;
+      }
+      
+      /* Mark the steps that are finished and valid: */
+      .step.finish {
+        background-color: #03a9f4;
+      }
+      
+  
