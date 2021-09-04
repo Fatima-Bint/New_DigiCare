@@ -1,16 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
-<link rel="stylesheet" href="/CSS/checker.css">
+<link rel="stylesheet" href="{% static 'css/checker.css' %}">
 </head>
 <body>
 
   <header class="header" id="navbar_top">
     <nav class="navbar">
-        <a href="index.html" id="logo" class="nav-logo"><img src="/assets/DigiCare .png" style="width: 80px; margin-top:-10px; margin-left:-20px;"></a>
+        <a href="/" id="logo" class="nav-logo"><img src="{% static 'assets/DigiCare .png' %}" style="width: 80px; margin-top:-10px; margin-left:-20px;"></a>
             </nav>
 </header> 
 <div id="main">
@@ -109,6 +111,6 @@
     </div>
   </form>
   </div>
-  <script src="/JavaScript/checker.js"></script>
+  <script src="{% static 'js/checker.js' %}"></script>
 </body>
 </html>

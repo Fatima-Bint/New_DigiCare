@@ -1,24 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Log In Or SignUp</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="/CSS/signup.css">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	</head>
 	<body>
 	
 		<header class="header" id="navbar_top">
 			<nav class="navbar">
-				<a href="/index.html" id="logo" class="nav-logo"><img src="/assets/DigiCare .png" style="width: 80px; margin-top: -25px;"></a>
+				<a href="/" id="logo" class="nav-logo"><img src="{% static 'assets/DigiCare .png' %}" style="width: 80px; margin-top: -25px;"></a>
 			</nav>
 		</header>	
 		<br><br><br><br><br>	
 <h2>DigiCare SignUp/LogIn</h2><br><br>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form >
+		<form method="POST" action="{% url 'authentication:signup' %}">
+			{% csrf_token %}
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
@@ -27,17 +29,18 @@
 			
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name"  id="txtName"/>
-			<input type="email" placeholder="Email" id="txtEmail" />
-			<input type="password" placeholder="Password" id="txtPassword" />
+			<input name="{{ signup_form.first_name.name }}" type="text" placeholder="Name"  id="txtName"/>
+			<input name="{{ signup_form.email.name }}" type="email" placeholder="Email" id="txtEmail" />
+			<input name="{{ signup_form.password.name }}" type="password" placeholder="Password" id="txtPassword" />
 			<br>
 			
 			<br>
-			<button id="btnSignUp">Sign Up</button>
+			<button type="submit" id="btnSignUp">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form>
+		<form method="POST" action="{% url 'authentication:login' %}">
+			{% csrf_token %}
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
@@ -45,10 +48,10 @@
 				<a href="#" class="social"><img src="https://img.icons8.com/color/48/000000/linkedin-circled--v1.png"/></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input name="{{ login_form.email.name }}" type="email" placeholder="Email" />
+			<input name="{{ login_form.password.name }}" type="password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
-			<button onclick="login()">Sign In</button>
+			<button type="submit">Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -66,7 +69,7 @@
 		</div>
 	</div>
 </div>
-<script src="script.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
@@ -90,7 +93,7 @@
   firebase.initializeApp(firebaseConfig);
  
 </script>
-<script src="/JavaScript/logIn.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
 
