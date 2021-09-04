@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<link rel="stylesheet" href="/CSS/checker.css">
+</head>
+<body>
+
+  <header class="header" id="navbar_top">
+    <nav class="navbar">
+        <a href="index.html" id="logo" class="nav-logo"><img src="/assets/DigiCare .png" style="width: 80px; margin-top:-10px; margin-left:-20px;"></a>
+            </nav>
+</header> 
+<div id="main">
+<div id="mySidebar" class="sidebar">
+  </div>
+  
+  <form id="regForm" action="/action_page.php">
+    
+    <!-- One "tab" for each step in the form: -->
+    <h1>Fill The CheckerUp Form Below</h1><br>
+    <div class="tab">Who is the checkup for?<br><br>
+      <select onclick="this.className = ''" name="checkup" >
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="myself">Myself</option>
+      <option value="someone">Someone else</option> 
+    </select>
+      </div>
+    
+
+    <div class="tab">Name<br><br>
+      <p><input placeholder="name" oninput="this.className = ''" name="fname"></p>
+      <br>
+      
+    </div>
+    <div class="tab">Sex<br><br>
+      <select onclick="this.className = ''" name="sex" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br>
+    </div>
+
+    <div class="tab">Age<br><br>
+      <p><input placeholder="years" oninput="this.className = ''" name="years"></p>
+    </div>
+    
+    <div class="tab">Are you pregnant?<br><br>
+      <select onclick="this.className = ''" name="pregnant" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="dont">I don't know</option>
+      </select>
+    </div>
+    <div class="tab">Are you overweight?<br><br>
+      <select onclick="this.className = ''" name="weight" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="dont">I don't know</option>
+      </select>
+    </div>
+    <div class="tab">Do you smoke cigarettes?<br><br>
+      <select onclick="this.className = ''" name="smoke" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="dont">I don't know</option>
+      </select>
+    </div>
+    <div class="tab">Do you have high cholesterol?<br><br>
+      <select onclick="this.className = ''" name="cholesterol" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="dont">I don't know</option>
+      </select>
+    </div>
+    <div class="tab">Do you have hypertension?<br><br>
+      <select onclick="this.className = ''" name="tension" >
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="dont">I don't know</option>
+      </select>
+    </div>
+    
+    <br>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+  </div>
+  <script src="/JavaScript/checker.js"></script>
+</body>
+</html>
